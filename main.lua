@@ -1,4 +1,3 @@
---runs on startup
 function love.load()
 
     denver = require 'lib.denver'
@@ -13,20 +12,13 @@ function love.load()
     currentOctave = 3
     waveform = 1
     keyboard = Keyboard(currentOctave, oscillatorsEnum[waveform])
-
     love.graphics.setBackgroundColor(1,1,1)
-
     waveFrame = 1
-
     animate = false
-
     back = love.graphics.newImage("res/back20.png")
-
 end
 
 function love.update(dt)
-
-
     for i=1,#keyboard.keys do 
         if love.keyboard.isDown(keyboard.keys[i].assignedButton) then
             updateWaveFrame(dt)    
@@ -38,7 +30,6 @@ function love.update(dt)
 end
 
 function updateWaveFrame(dt)
-
     if waveform == 1 then
         waveFrame = waveFrame + 33*dt
         if waveFrame >= #sineFrames then
@@ -110,10 +101,10 @@ function love.draw()
     love.graphics.draw(back,50,50)
     love.graphics.draw(waveTable[waveform][math.floor(waveFrame)], 410, 90)
 
-
     love.graphics.setColor(0,0,0)
     love.graphics.print("Octave:".. currentOctave .. " [,]-[.] to change" , 50,20)
     love.graphics.print("Waveform:".. oscillatorsEnum[waveform].. " [z]-[x] to change", 400,20)
+    love.graphics.print("Top row of letters and numbers to play!", 400,650)
     love.graphics.setColor(1,1,1,1)
 
 end

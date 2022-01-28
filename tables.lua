@@ -1,14 +1,8 @@
-
-
-
 topButtons = {'2', '3', '5', '6', '7', '9', '0', '='}
 midButtons = {'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']'}
-
 notes = {'C', 'D', 'E', 'F', 'G', 'A', 'B'}
 sharps = {'C#', 'D#', 'F#', 'G#', 'A#'}
-
 oscillatorsEnum = {'sinus', 'square', 'sawtooth', 'triangle', 'whitenoise'}--, 'pinknoise', 'brownnoise'}
-
 sharpX = {0,0,1,1,1,2,2,3}
 
 sineFrames = {}
